@@ -1,0 +1,48 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="master">
+           <div id="position" class="transform scale-125 absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <div id="container" class="shadow-xl overflow-hidden h-32 w-64 text-white rounded-3xl backdrop-filter backdrop-blur-3xl backdrop-saturate-150 bg-black bg-opacity-40">
+                    <div id="text" class="flex mx-auto justify-center items-center h-full text-center">
+                        <div class="absolute top-0 h-6 w-full bg-gradient-to-r from-green-400 to-green-200"></div>
+                        <p class="transform scale-150 w-6 rounded-xl font-black bg-gradient-to-r from-green-400 to-green-200 mx-2">!</p><p class="mx-2 inter font-medium">replace</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
+
+<script>
+    let main = document.getElementById("master");
+
+    function hide() {
+        main.style.display = "none";
+    }
+
+    function show() {
+        main.style.display = "table";
+    }
+
+    function replace(text) {
+        document.body.innerHTML = document.body.innerHTML.replace('replace', `${text}`);
+    }
+</script>
+
+<style>
+    .inter {
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+        font-family: 'Inter', sans-serif;
+        
+    }
+</style>
